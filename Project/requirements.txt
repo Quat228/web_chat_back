@@ -8,3 +8,4 @@ requests
 django-cors-headers
 djangorestframework
 psycopg2-binary
+drf-yasg
