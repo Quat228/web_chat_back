@@ -128,15 +128,6 @@
 					} else if (data['command'] === 'new_message') {
 						createMessage(data['message']);
 					}
-
-					if (author === userName) {
-						msgListTag.className = 'sent';
-					} else {
-						msgListTag.className = 'replies';
-					}
-					msgListTag.appendChild(imgTag);
-					msgListTag.appendChild(pTag);
-					document.querySelector('#chat-log').appendChild(msgListTag);
 			};
 
 			chatSocket.onclose = function(e) {
@@ -152,13 +143,16 @@
 			document.querySelector('#chat-message-submit').onclick = function(e) {
 					const messageInputDom = document.querySelector('#chat-message-input');
 					const message = messageInputDom.value;
-					chatSocket.send(JSON.stringify({
+					if (message === '') {
+						//pass
+					} else {
+						chatSocket.send(JSON.stringify({
 							'message': message,
 							'command': 'new_message',
 							'from': userName
-					}));
-
-					messageInputDom.value = '';
+						}));
+						messageInputDom.value = '';
+					}
 			};
 
 			function fetchMessages() {
