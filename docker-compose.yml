@@ -23,7 +23,7 @@ services:
       - POSTGRES_PASSWORD=my_proj
       - POSTGRES_DB=my_proj_dev
   redis:
-    image: redis:6.2.5-alpine3.14
+    image: redis:alpine
     ports:
       - "6379:6379"
     volumes:

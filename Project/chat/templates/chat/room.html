@@ -115,9 +115,9 @@
 					+ '/'
 			);
 
-			chatSocket.onopen = function(e) {
-				fetchMessages();
-			}
+<!--			chatSocket.onopen = function(e) {-->
+<!--				fetchMessages();-->
+<!--			}-->
 
 			chatSocket.onmessage = function(e) {
 					var data = JSON.parse(e.data);
