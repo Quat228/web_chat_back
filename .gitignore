@@ -1,0 +1,8 @@
+venv/
+pgbackups/
+.idea/
+**/__pycache__/
+*.pyc
+
+.env.dev
+Project/entrypoint.sh

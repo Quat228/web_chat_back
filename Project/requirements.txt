@@ -1,0 +1,9 @@
+django
+channels
+daphne
+channels_redis
+selenium
+requests
+django-cors-headers
+djangorestframework
+psycopg2-binary
