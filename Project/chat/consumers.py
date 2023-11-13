@@ -43,8 +43,9 @@ class ChatConsumer(AsyncWebsocketConsumer):
         return message
 
     async def messages_to_json(self, messages):
-        # return [await self.message_to_json(message) for message in messages]
-        return ['hello', 'hi']
+
+        for message in messages:
+            print(await self.message_to_json(message))
 
     async def message_to_json(self, message):
         return {

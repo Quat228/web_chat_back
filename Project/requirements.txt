@@ -1,8 +1,9 @@
 django
 channels
 daphne
-channels_redis
+channels-redis
 selenium
+redis
 requests
 django-cors-headers
 djangorestframework
